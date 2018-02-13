@@ -1,27 +1,30 @@
 body {
-  height: 100%;
-  background-color:#1B5E20;
   overflow-x: hidden;
+  background-color:#1B5E20;
+  margin:0;
+
 }
+
 
 #about, #gallery{
   background-color: white;
   padding: 5%;
+  overflow: hidden;
 }
 
 #services{
   background-image: url("images/leso.jpg");
+  overflow: hidden;
 }
 
 #contact{
   background-image: url("images/w.jpg");
+  overflow: hidden;
+
 }
 
 .container {
   height: 100%;
-  width: 100%;
-  
-
 }
 
 .text-center{
@@ -51,7 +54,6 @@ body {
 .carousel-item{
   height: 100%;
   padding-top: 10%;
-
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -101,8 +103,8 @@ body {
   text-align: center;
 }
 .serv-img img{
-  width:  250px;
-  height: 250px;
+  width:  15em;
+  height: 15em;
   border-radius: 50%;
   margin-left: 5%;
 }
@@ -182,6 +184,7 @@ body {
 
 .map{
   background-color: #38454F;
+  
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -197,6 +200,9 @@ body {
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
+  body{
+    overflow-x: hidden;
+  }
   .column {
     flex: 100%;
     max-width: 100%;
