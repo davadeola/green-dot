@@ -1,39 +1,95 @@
 body {
-  overflow-x: hidden;
-  background-color:#1B5E20;
   margin:0;
-
-}
-
-
-#about, #gallery{
   background-color: white;
-  padding: 5%;
+}
+h1, h3 {
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+div{
   overflow: hidden;
-}
-
-#services{
-  background-image: url("images/leso.jpg");
-  overflow: hidden;
-}
-
-#contact{
-  background-image: url("images/w.jpg");
-  overflow: hidden;
-
-}
-
-.container {
-  height: 100%;
-}
-
-.text-center{
-  margin:5%;
+  position: relative;
 }
 
 
-.companylogos img {
-  width: 100px;
+.container-fluid{
+  margin: 0;
+  padding: 0;
+}
+
+.subheading{
+  color: #000;
+  font-family: 'Dancing Script', cursive;
+  text-transform: none;
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+#home img{
+  width: 30%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+.text{
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 5%;
+
+}
+.text p, .text a{
+  color: black;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+  text-decoration: none;
+  }
+
+#home{
+background-image: url("images/leso.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+
+  text-align: center;
+
+}
+
+#services1{
+  background-image: url("images/v.jpg");
+}
+
+#gallery6{
+  background-image: url("images/back3.jpg");
+}
+#gallery3{
+  background-image: url("images/z.jpg");
+}
+
+
+#logos{
+  background-color: white;
+
+}
+
+.container-fluid #contactinfo{
+  background-color: black;
+}
+
+#gallery1{
+  background-image: url("images/q.jpg");
+}
+
+.display-3{
+  margin-top: 7.5%;
+}
+
+.companylogos{
+  padding: 5% 0 5% 5%;
+}
+.companylogos img{
+  width: 50%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -42,157 +98,64 @@ body {
 }
 
 
-#menubar{
-  width: 3.75em;
-  z-index: 100;
-  position: fixed;
-  margin: 1%;
-  cursor: pointer;
-}
 
-.carousel-item{
-  height: 100%;
-  padding-top: 10%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  opacity: 0.75;
-
-}
-
-.navbar{
-  /*height: 50px;*/
-  background-color: white;
-}
-
-.carousel-item h1{
+#contactinfo h3, #contactinfo p, #contactinfo a{
   color: white;
-  text-align: center;
-  font-size: 10em;
-  margin-bottom: 5%;
-}
-
-
-.demo1 {
-  height: 100%;
-  text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding: 5%;
 
 }
+#contactinfo{
+  margin-bottom: 0;
+  padding-bottom: 5%;
+}
 
-
-
+.col-md-4, .col-md-6, .col-md-3, .col-md-5 , .col-md-7{
+  padding: 0;
+}
 .demo1-bg {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-
+  height: 30.5em;
 }
 
-.serv-img{
-  background-color: #38454F;
-  opacity: 0.95;
-  padding-top: 2.5%;
-  padding-bottom: 2.5%;
-  text-align: center;
-}
-.serv-img img{
-  width:  15em;
-  height: 15em;
-  border-radius: 50%;
-  margin-left: 5%;
+ .bg-dark{
+  background-color: black !important;
 }
 
-.serv-img h5, .serv-img a, .serv-img p{
-  color: white;
-  overflow-wrap: break-word;
-}
-.slide1 {
-  background-image: url("images/back1.jpg");
-  background-size: cover;
-
-}
-
-.slide2 {
-  background-image: url("images/back2.jpg");
-  background-size: cover;
-
-}
-
-.slide3 {
-  background-image: url("images/back3.jpg");
-  background-size: cover;
-
-}
-
-.demo {
-  background-color: #dbdfe5;
-  margin: 2.5%;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
 
 /* Create four equal columns that sits next to each other */
-#gallery{
-  padding-top: 2.5%;
+.gallery{
+  padding: 1.75%;
 }
 .column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+  flex: 50%;
+  max-width: 50%;
+  padding: 4px 4px 4px 4px;
   overflow-x: hidden;
-
-}
-.more{
-  display: none;
-}
-.p-2 img{
-  width: 2em;
-  height: 2em;
-  margin-left: 25%;
-  margin-right: 25%;
 }
 
-
-
-#more{
-  background-color: white;
-  display: block;
-  width: 25%;
-  color: black;
-  border-color: #38454F;
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
-  margin-left: 37.5%;
-}
 
 .column img {
   margin: 5px;
   vertical-align: middle;
   width: 125%;
+  cursor: pointer;
 }
 
-.map{
-  background-color: #38454F;
-
+.column img:hover{
+filter: grayscale(75%);
 }
+
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
+  .display-3{
+    font-size: 60px;
   }
-  .carousel-item h1{
-    font-size: 5em;
+
+  .companylogos img{
+    width: 25%;
   }
 }
 
@@ -201,66 +164,7 @@ body {
   body{
     overflow-x: hidden;
   }
-  .column {
-    flex: 100%;
-    max-width: 100%;
+  #home img{
+    width: 60%;
   }
-}
-
-
-.overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */
-    height: 0;
-    width: 100%;
-    position: fixed; /* Stay in place */
-    z-index: 10000; /* Sit on top */
-    left: 0;
-    top: 0;
-    background-color: #38454F;
-    opacity: 0.9;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-}
-
-/* Position the content inside the overlay */
-.overlay-content {
-    position: relative;
-    top: 25%; /* 25% from the top */
-    width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-}
-
-/* The navigation links inside the overlay */
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block; /* Display block instead of inline */
-    transition: 0.3s; /* Transition effects on hover (color) */
-}
-
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-}
-
-/* Position the close button (top right corner) */
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-}
-
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
-
 }

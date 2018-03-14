@@ -1,43 +1,47 @@
 AOS.init();
 
-/* Open */
-
-function openNav() {
-    document.getElementById("myNav").style.height = "100%";
-}
-
-/* Close */
-function closeNav() {
-    document.getElementById("myNav").style.height = "0%";
-}
-
-initMap=()=>{
-  var office = {lat:-1.299752, lng:36.792060};
-  var map = new google.maps.Map(document.getElementById('map'),{zoom: 20, center: office});
-  var marker = new google.maps.Marker({position: office, map:map});
-}
-
+// window.onscroll= function(){
+//   if(document.body.scrollTop>30 || document.documentElement.scrollTop > 30){
+//     document.getElementById("mainNav").style.display = "block"
+//   }else{
+//     document.getElementById("mainNav").style.display="none";
+//   }
+// }
 $(document).ready(function() {
-  $('a').click(function() {
+  $("#mainNav").hide();
+  $('a#contactinfo').click(function() {
     $('html, body').animate({
       scrollTop: $($(this).attr('href')).offset().top
-    }, 500);
+    }, 1500);
     return false;
   });
 
-  $('button#more').click(function(){
-    $('img.more').slideToggle('slow', function(){
-        if ($('img.more').css('display')=='none') {
-          $('button#more').html('SHOW MORE');
-        } else {
-          $('button#more').html('LESS');
-        }
 
+
+    // hide .navbar first
+
+
+    // fade in .navbar
+    $(function () {
+        $(window).scroll(function () {
+
+                 // set distance user needs to scroll before we start fadeIn
+            if ($(this).scrollTop() > 100) {
+                $('#mainNav').slideDown();
+            } else {
+                $('#mainNav').slideUp();
+            }
+        });
     });
-  })
 
 
 
+
+
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  });
 
 
 
