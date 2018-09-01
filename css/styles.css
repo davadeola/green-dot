@@ -1,17 +1,23 @@
 body {
   margin:0;
-  background-color: black;
+  background-color: White;
 }
 h1, h3 {
   font-weight: bold;
-  color: white;
+  color: black;
   text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  text-transform: none;
 }
 div{
   overflow: hidden;
   position: relative;
 }
 
+div.logo.aos-init.aos-animate{
+  opacity: 0.85;
+}
 
 .container-fluid{
   margin: 0;
@@ -19,11 +25,24 @@ div{
 }
 
 .subheading{
-  color: #fff;
   font-family: 'Dancing Script', cursive;
   text-transform: none;
   margin-bottom: 10%;
   text-align: center;
+}
+
+.logo{
+  background-color:black;
+  background-blend-mode: lighten;
+  width: 400px;
+  margin: 0 auto;
+}
+.logo img{
+  width: 100%;
+}
+a.navbar-brand{
+  font-family: 'Dancing Script', cursive;
+  text-transform: none;
 }
 
 
@@ -35,11 +54,11 @@ div{
 
 }
 .text p, .text a{
-  color: white;
-  font-family: 'Dancing Script', cursive;
+  color: black;
+
   text-align: center;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 22.5px;
   text-decoration: none;
   }
 
@@ -48,7 +67,13 @@ background-image: url("images/leso.jpg");
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
-  opacity: 0.75;
+  padding: 5%;
+
+}
+
+#welcome div.logo{
+  display: inline;
+  float: right;
 }
 
 #services1{
@@ -70,6 +95,7 @@ background-image: url("images/leso.jpg");
 
 .container-fluid #contactinfo{
   background-color: black;
+  height: 100vh;
 }
 
 #gallery1{
@@ -113,6 +139,7 @@ background-image: url("images/leso.jpg");
   background-attachment: fixed;
   background-position: center;
   height: 30.5em;
+
 }
 
  .bg-dark{
