@@ -60,17 +60,27 @@ a.navbar-brand{
   }
 
 #home{
-background-image: url("images/j.jpg");
-  background-attachment: fixed;
-  text-align: center;
-  background-size: cover;
-  filter: grayscale(1);
+  filter: grayscale(0);
 }
-
+#home video{
+  position: absolute;
+}
+#home .container-fluid{
+  position: relative;
+}
 #welcome div.logo{
   display: inline;
   float: right;
 }
+
+#home h1{
+  color: white;
+}
+
+#home h2{
+  color: white;
+}
+
 
 #services1{
   background-image: url("images/v.jpg");
@@ -190,6 +200,7 @@ filter: grayscale(1);
 .p-2 img{
   width: 3.75em;
 }
+
 
 
 /* Responsive layout - makes a two column-layout instead of four columns */
