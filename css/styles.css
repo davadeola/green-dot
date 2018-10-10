@@ -193,6 +193,50 @@ filter: grayscale(1);
 }
 
 
+.menubar{
+  margin: .375%;
+  width: 97.75%;
+  position: fixed;
+  z-index: 1000;
+}
+.menu{
+  margin-top: 5px;
+  height: 3.75em;
+  padding: .5em;
+  width: 4.5em;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+.menu :first-child{
+  background-color: black;
+  width: 3em;
+  height: .275em;
+  position: absolute;
+  top: 25%;
+  border-radius: 25%;
+}
+
+.menu :nth-child(2){
+  background-color: black;
+  width: 3em;
+  height: .275em;
+  position: absolute;
+  top: 50%;
+  border-radius: 25%;
+}
+
+.menu :nth-child(3){
+
+  background-color: black;
+  width: 3em;
+  height: .275em;
+  position: absolute;
+  top: 75%;
+  border-radius: 25%;
+}
+
+
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media (max-width: 800px) {
@@ -207,12 +251,21 @@ filter: grayscale(1);
     width: 50%;
     display: block;
     margin: 0 auto;
-    filter: grayscale(1);
   }
 
-  .menu{
+  .menubar{
+    background-color: white;
     width: 100%;
-
+    margin: 0;
+  }
+  .menu{
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+  .container-fluid{
+    padding-left: 0;
+    margin: 0;
   }
 }
 
@@ -230,49 +283,4 @@ filter: grayscale(1);
   }
 
 
-}
-
-
-.menubar{
-  background-color: none;
-  position: absolute;
-
-}
-.menu{
-  margin-top: 5px;
-  background-color: white;
-  height: 3.75em;
-  padding: .5em;
-  width: 4.5em;
-  z-index: 1000;
-  position: fixed;
-  cursor: pointer;
-  display: flex;
-  justify-content: flex-end;
-}
-.menu :first-child{
-  background-color: black;
-  width: 3em;
-  height: .375em;
-  z-index: 2000;
-  position: absolute;
-  top: 25%;
-}
-
-.menu :nth-child(2){
-  background-color: black;
-  width: 3em;
-  height: .375em;
-  z-index: 2000;
-  position: absolute;
-  top: 50%;
-}
-
-.menu :nth-child(3){
-  background-color: black;
-  width: 3em;
-  height: .375em;
-  z-index: 2000;
-  position: absolute;
-  top: 75%;
 }
