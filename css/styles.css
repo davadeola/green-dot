@@ -142,15 +142,6 @@ a.navbar-brand{
 }
 
 
-
-#contactinfo h3, #contactinfo p, #contactinfo a{
-  color: white;
-
-}
-#contactinfo{
-  margin-bottom: 0;
-}
-
 .col-md-4, .col-md-6, .col-md-3, .col-md-5 , .col-md-7{
   padding: 0;
 }
@@ -228,4 +219,27 @@ filter: grayscale(1);
   #home img{
     width: 60%;
   }
+
+  .display-1{
+    font-size: 60px;
+  }
+}
+
+.menu{
+  position: fixed;
+  background-color: white;
+  height: 3.75em;
+  width: 3.75em;
+  z-index: 1000;
+  top: 2.5%;
+  left: 95%;
+  padding: 1.5%;
+}
+.menu span{
+  background-color: black;
+  width: 30px;
+  height: 10px;
+  z-index: 2000;
+  position: absolute;
+  margin-bottom: 2.5%;
 }
