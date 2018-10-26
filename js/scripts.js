@@ -7,6 +7,20 @@ AOS.init();
 //     document.getElementById("mainNav").style.display="none";
 //   }
 // }
+var i = 0;
+
+var counter = setInterval(function(){
+  i++;
+document.getElementById("counter").innerHTML=i;
+document.getElementById("meter").style.width = i+"%";
+if (i==100) {
+  clearInterval(counter);
+  document.getElementById("loader").style.display="none";
+    document.getElementById("showWeb").style.display="block";
+}
+}, 75);
+
+
 $(document).ready(function() {
   $("#mainNav").hide();
   $('a#contactinfo').click(function() {
@@ -24,7 +38,6 @@ $(".menu").click(function(){
 );
     // hide .navbar first
 
-
     // fade in .navbar
     $(function () {
         $(window).scroll(function () {
@@ -37,16 +50,9 @@ $(".menu").click(function(){
             }
         });
     });
-
-
-
-
-
   $(document).on('click', '[data-toggle="lightbox"]', function(event) {
     event.preventDefault();
     $(this).ekkoLightbox();
   });
-
-
 
 })

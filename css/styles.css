@@ -14,6 +14,27 @@ div{
   overflow: hidden;
 }
 
+.loader{
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  z-index: 2000;
+  position: absolute;
+  padding-top: 15%;
+}
+
+.meter{
+  height: .25em;
+  background-color: black;
+  margin-top: 5%;
+  width: 0;
+  transition: .15s ease-in-out;
+}
+
+#showWeb{
+  display: none;
+  transition: .5s ease-in-out;
+}
 div.logo.aos-init.aos-animate{
   padding: 5em;
 }
@@ -23,10 +44,6 @@ div.logo.aos-init.aos-animate{
   padding: 0;
 }
 
-/*.container-fluid{
-  margin: 0;
-  padding: 0;
-}*/
 
 .subheading{
   font-family: 'Dancing Script', cursive;
