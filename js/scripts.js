@@ -19,6 +19,7 @@ $(document).ready(function() {
 
 $(".menu").click(function(){
   $(this).toggleClass("open");
+  $(".menucontent").toggleClass("open");
 },
 );
     // hide .navbar first

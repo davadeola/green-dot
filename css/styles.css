@@ -126,7 +126,7 @@ a.navbar-brand{
 }
 
 .display-1{
-  margin: 5%;
+  margin-top: 10%;
   font-size: 10.75em;
   font-weight: bolder;
 }
@@ -215,7 +215,7 @@ filter: grayscale(1);
   position: absolute;
   top: 25%;
   border-radius: 25%;
-  transition: .25s ease-in-out;
+  transition: .35s ease-in-out;
 }
 
 .menu :nth-child(2){
@@ -225,7 +225,7 @@ filter: grayscale(1);
   position: absolute;
   top: 50%;
   border-radius: 25%;
-  transition: .25s ease-in-out;
+  transition: .35s ease-in-out;
 }
 
 .menu :nth-child(3){
@@ -235,17 +235,17 @@ filter: grayscale(1);
   position: absolute;
   top: 75%;
   border-radius: 25%;
-  transition: .25s ease-in-out;
+  transition: .35s ease-in-out;
 }
 .menu.open :first-child{
   transform: rotate(45deg);
   top: 50%;
-  transition: .25s ease-in-out;
+  transition: .35s ease-in-out;
 }
 .menu.open :nth-child(3){
   transform: rotate(-45deg);
   top: 50%;
-  transition: .25s ease-in-out;
+  transition: .35s ease-in-out;
 }
 
 .menu.open :nth-child(2){
@@ -253,10 +253,44 @@ filter: grayscale(1);
   transition: .15s ease-in-out;
 }
 
+.menucontent{
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 500;
+  background-color: white;
+  margin-left: 100%;
+  transition: 1s ease-in-out;
+}
+.menucontent.open{
+  margin-left: 0%;
+  transition: 1s ease-in-out;
+}
+.menucontent ul{
+  list-style: none;
+}
+
+.menucontent ul li {
+  font-size: 5em;
+  text-align: center;
+  margin: 5%;
+}
+.menucontent ul li a {
+  text-decoration: none;
+  transition: .25s ease-in-out;
+}
+
+.menucontent ul li a:hover {
+  text-decoration: line-through;
+  transition: .25s ease-in-out;
+}
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media (max-width: 800px) {
   .display-3{
     font-size: 60px;
+  }
+  .display-1{
+    margin: 15%;
   }
   .companylogos{
     padding: 5% 0 5% 5%;
@@ -276,11 +310,20 @@ filter: grayscale(1);
   .menu{
     float: none;
     display: block;
-    margin: 0 auto;
+    margin-left: 45%;
   }
   .container-fluid{
     padding-left: 0;
     margin: 0;
+  }
+  .menucontent{
+
+    padding-top: 25%;
+  }
+  .menucontent ul li {
+    font-size: 3.5em;
+    text-align: center;
+    margin: 5%;
   }
 }
 
