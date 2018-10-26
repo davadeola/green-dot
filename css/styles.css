@@ -215,6 +215,7 @@ filter: grayscale(1);
   position: absolute;
   top: 25%;
   border-radius: 25%;
+  transition: .25s ease-in-out;
 }
 
 .menu :nth-child(2){
@@ -224,19 +225,33 @@ filter: grayscale(1);
   position: absolute;
   top: 50%;
   border-radius: 25%;
+  transition: .25s ease-in-out;
 }
 
 .menu :nth-child(3){
-
   background-color: black;
   width: 3em;
   height: .275em;
   position: absolute;
   top: 75%;
   border-radius: 25%;
+  transition: .25s ease-in-out;
+}
+.menu.open :first-child{
+  transform: rotate(45deg);
+  top: 50%;
+  transition: .25s ease-in-out;
+}
+.menu.open :nth-child(3){
+  transform: rotate(-45deg);
+  top: 50%;
+  transition: .25s ease-in-out;
 }
 
-
+.menu.open :nth-child(2){
+  filter: opacity(0);
+  transition: .15s ease-in-out;
+}
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media (max-width: 800px) {
