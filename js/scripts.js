@@ -18,38 +18,44 @@ if (i==100) {
   document.getElementById("loader").style.display="none";
     document.getElementById("showWeb").style.display="block";
 }
-}, 75);
+}, 50);
+
 
 
 $(document).ready(function() {
-  $("#mainNav").hide();
-  $('a#contactinfo').click(function() {
-    $('html, body').animate({
-      scrollTop: $($(this).attr('href')).offset().top
-    }, 1500);
-    return false;
-  });
+  // $("#mainNav").hide();
+  // $('a#contactinfo').click(function() {
+  //   $('html, body').animate({
+  //     scrollTop: $($(this).attr('href')).offset().top
+  //   }, 1500);
+  //   return false;
+  // });
 
 
 $(".menu").click(function(){
   $(this).toggleClass("open");
-  $(".menucontent").toggleClass("open");
-},
-);
+  if ($(".menu").hasClass("open")) {
+    TweenMax.staggerFrom(".menu-item", 1, {x:250, opacity:0}, .25);
+  }
+  $(".menucontent").fadeToggle("fast", "swing");
+
+});
+
+
     // hide .navbar first
-
-    // fade in .navbar
-    $(function () {
-        $(window).scroll(function () {
-
-                 // set distance user needs to scroll before we start fadeIn
-            if ($(this).scrollTop() > 100) {
-                $('#mainNav').slideDown();
-            } else {
-                $('#mainNav').slideUp();
-            }
-        });
-    });
+    //
+    // // fade in .navbar
+    // $(function () {
+    //     $(window).scroll(function () {
+    //
+    //              // set distance user needs to scroll before we start fadeIn
+    //         if ($(this).scrollTop() > 100) {
+    //             $('#mainNav').slideDown();
+    //         } else {
+    //             $('#mainNav').slideUp();
+    //         }
+    //     });
+    // });
   $(document).on('click', '[data-toggle="lightbox"]', function(event) {
     event.preventDefault();
     $(this).ekkoLightbox();

@@ -77,13 +77,20 @@ a.navbar-brand{
   }
 
 #home{
-  filter: grayscale(0);
+  position: relative;
+
+}
+#home .video-container{
+  z-index: -1;
 }
 #home video{
-  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 #home .container-fluid{
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #welcome div.logo{
   display: inline;
@@ -120,6 +127,8 @@ a.navbar-brand{
   background-color: black;
   padding: 5%;
   color: white;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .contact ul{
@@ -276,13 +285,14 @@ filter: grayscale(1);
   position: fixed;
   z-index: 500;
   background-color: white;
-  margin-left: 100%;
-  transition: 1s ease-in-out;
+  margin-left: 0%;
+  display: none;
+  /*transition: 1s ease-in-out;*/
 }
-.menucontent.open{
+/*.menucontent.open{
   margin-left: 0%;
   transition: 1s ease-in-out;
-}
+}*/
 .menucontent ul{
   list-style: none;
 }
@@ -318,7 +328,10 @@ filter: grayscale(1);
     display: block;
     margin: 0 auto;
   }
-
+  #home video{
+    height: 100%;
+    width: 100%;
+  }
   .menubar{
     background-color: white;
     width: 100%;

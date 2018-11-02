@@ -21,7 +21,7 @@
 
 <body>
 <div class="loader" id="loader">
-    <h1 class="display-3"><span id="counter">0</span>%</h1>
+    <h1><span id="counter">0</span>%</h1>
   <div class="meter" id="meter"></div>
 </div>
 
@@ -29,7 +29,7 @@
 
 <div class="container-fluid">
   <div class="menubar">
-  <div class="menu">
+  <div class="menu" id="menu">
     <span></span>
     <span></span>
     <span></span>
@@ -39,15 +39,18 @@
 
 <div class="menucontent">
   <ul>
-    <li><a href="index.html">HOME</a></li>
-    <li><a href="gallery.html">GALLERY</a></li>
-    <li><a href="services.html">SERVICES</a></li>
+    <li class="menu-item"><a href="index.html">HOME</a></li>
+    <li class="menu-item"><a href="gallery.html">GALLERY</a></li>
+    <li class="menu-item"><a href="services.html">SERVICES</a></li>
   </ul>
 </div>
   <div id="home">
-    <video autoplay="true" loop >
+    <div class="video-container">
+    <video autoplay loop muted>
       <source src="vu.mp4" type="video/mp4">
+      <p>This video is not supported</p>
     </video>
+    </div>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -133,7 +136,7 @@
           </ul>
         </div>
         <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="d-flex justify-content-start">
+          <div class="d-flex justify-content-center">
 
             <div class="p-2"><img src="css/images/facebook.png" alt=""></div>
             <div class="p-2"><img src="css/images/youtube.png" alt=""></div>
@@ -158,6 +161,7 @@
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="js/jquery-3.2.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   <script src="aos-master/dist/aos.js"></script>
